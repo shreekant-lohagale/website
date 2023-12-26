@@ -1,7 +1,15 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     font-family:'Gilroy Regular';
     color: white;
 }
@@ -17,6 +25,8 @@ html,body{
     background-color: #EDBFFF;
     z-index: 8;
     mix-blend-mode: difference;
+    -webkit-transition: background-image ease 0.5s;
+    -o-transition: background-image ease 0.5s;
     transition: background-image ease 0.5s;
     background-position: center;
     background-size: cover;
@@ -30,6 +40,8 @@ html,body{
     z-index: 11;
     opacity: 0;
     display: none;
+    -webkit-transition: all ease 1s;
+    -o-transition: all ease 1s;
     transition: all ease 1s;
     
 }
@@ -47,9 +59,15 @@ html,body{
 #nav{
     height: 55px;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 0 30px;
     position: fixed;
     mix-blend-mode
@@ -58,16 +76,28 @@ html,body{
 }
 .logo{
     width: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-radius: 100%;
     border: 2px solid white;
 }
 #nav-part2{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 24px;
 }
 #nav #circle{
@@ -92,10 +122,14 @@ html,body{
     width: 0%;
     height: 2px;
     background-color:white;
+    -webkit-transition: width .3;
+    -o-transition: width .3;
     transition: width .3;
 }
 .hover-list1:hover::after{
     width: 100%;
+    -webkit-transition: width .5s;
+    -o-transition: width .5s;
     transition: width .5s;
 }
 .page1 h1{
@@ -115,7 +149,9 @@ html,body{
     width: 60%;
     position: relative;
     left: 50%;
-    transform: translate(-50%,0);
+    -webkit-transform: translate(-50%,0);
+        -ms-transform: translate(-50%,0);
+            transform: translate(-50%,0);
 }
 .page2{
     min-height: 80vh;
@@ -133,9 +169,15 @@ html,body{
 .page2-container{
     height: 60vh;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .page2-left{
     width: 38%;
@@ -177,15 +219,27 @@ html,body{
     margin-left: 100px;
 }
 .page3-part1{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .video1{
     margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .page4{
     border: 10px solid blueviolet;
@@ -209,9 +263,15 @@ html,body{
     margin-bottom:50px ;
 }
 .box{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     height: 100px;
     padding: 0 20px;
     border-top: 2px solid #dadada;
@@ -220,13 +280,21 @@ html,body{
     border-bottom: 2px solid #dadada;
 }
 .elem{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items:center;
-    justify-content: center;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: relative;
 }
 .elem h1{
     font-size: 7.3vw;
+    -webkit-transition: all ease-out 0.5s;
+    -o-transition: all ease-out 0.5s;
     transition: all ease-out 0.5s;
     font-weight: 600;
 }
@@ -237,8 +305,12 @@ html,body{
 .elem img{
     position: absolute;
     opacity: 0;
+    -webkit-transition: all ease-out 0.5s;
+    -o-transition: all ease-out 0.5s;
     transition: all ease-out 0.5s;
-    transform: translateY(10%) rotate(2deg);
+    -webkit-transform: translateY(10%) rotate(2deg);
+        -ms-transform: translateY(10%) rotate(2deg);
+            transform: translateY(10%) rotate(2deg);
 
 }
 .elem img:nth-child(1){
@@ -248,12 +320,16 @@ html,body{
     right:5% ;
 }
 .elem:hover h1{
-    transform:translateY(-100%) ;
+    -webkit-transform:translateY(-100%) ;
+        -ms-transform:translateY(-100%) ;
+            transform:translateY(-100%) ;
     color: #EDBFFF;
 }
 .elem:hover img{
     opacity: 1;
-    transform: translateY(0) rotate(0deg);
+    -webkit-transform: translateY(0) rotate(0deg);
+        -ms-transform: translateY(0) rotate(0deg);
+            transform: translateY(0) rotate(0deg);
 
 }
 footer{
